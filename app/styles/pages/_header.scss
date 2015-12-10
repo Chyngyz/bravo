@@ -58,6 +58,7 @@
       font-size: rem(15);
       font-family: $roboto-cond;
       text-decoration: none;
+      text-transform: uppercase;
 
       &:active, &:focus, &:hover {
         border-bottom: 1px dashed;
