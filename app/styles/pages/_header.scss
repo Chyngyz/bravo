@@ -1,0 +1,147 @@
+.header {
+  position:fixed;
+  height: 105px;
+  width: 100%;
+  display: block;
+  background-image: url('../images/header-bg.png');
+  background-repeat: repeat-x;
+  z-index:9;
+  top: 0px;
+  padding-top: 5px;
+  
+  .container {
+    @include display(flex);
+    @include justify-content(space-between);
+    @include align-items(center);
+  }
+
+  .logo {
+    width: 120px;
+    display: inline-block;
+
+    a {
+      display: block;
+
+      &:hover, &:focus, &:active {
+        border-bottom: none;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  nav {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .main-nav {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      padding-top: 15px;
+      margin-right: 25px;
+
+      &:first-child {
+        margin-left: 25px;
+      }
+    }
+
+    a {
+      color: #fff;
+      font-size: rem(15);
+      font-family: $roboto-cond;
+      text-decoration: none;
+
+      &:active, &:focus, &:hover {
+        border-bottom: 1px dashed;
+      }
+
+    }
+  }
+
+  .bravo-menu {
+    position: relative;
+    display: block;
+    a {
+      color: #FF3624;
+    }
+
+    &:after {
+      content: "PDF";
+      position: absolute;
+      top: 25%;
+      left: 110%;
+      color: #fff;
+      background-color: #A90000;
+      font-size: rem(9);
+      font-family: $roboto-cond;
+      border-radius: 3px;
+      font-weight: bold;
+      padding: 2px 3px;
+
+    }
+  }
+
+  &-l {
+    height: 80px;
+  }
+
+  &-r {
+    text-align: right;
+    margin-top: -3px;
+
+    .other {
+      font-size: rem(13);
+      font-family: $roboto;
+      color: #fff;
+
+      &:first-child {
+        padding-bottom: 5px;
+      }
+
+      a {
+        padding-left: 10px;
+        margin-left: 20px;
+        color: #fff;
+
+        &:active, &:focus, &:hover {
+          border-bottom: none;
+        }
+      }
+    }
+
+    .tel {
+      font-size: rem(20);
+      font-family: $proxima-bold;
+      color: #fff;
+      line-height: 1.2;
+
+      span {
+        color: #666;
+      }
+    }
+  }
+}
+
+.marked {
+  position: relative;
+
+  &:before {
+    content:'';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 5px;
+    width: 5px;
+    background-color: #8A73FF;
+    border-radius: 50%;
+    @include transform(translateY(-50%));
+  }
+}

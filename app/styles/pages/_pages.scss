@@ -1,0 +1,118 @@
+.section {
+	background-size: cover;
+	background-position: center center;
+}
+
+.home {
+	background-image: url('../images/bg/home.jpg');
+}
+.pub {
+	background-image: url('../images/bg/pub.jpg');
+}
+.restaurant {
+	background-image: url('../images/bg/restaurant.jpg');
+}
+.nightclub {
+	background-image: url('../images/bg/nightclub.jpg');
+}
+.contact {
+	background-image: url('../images/bg/contact.jpg');
+}
+
+// ===============================================
+//
+// Page in detail
+//
+// ===============================================	
+
+.home {
+	text-align: center;
+	position: relative;
+
+	.brand {
+		width: 290px;
+		display: inline-block;
+		margin-bottom: 50px;
+	}
+
+	.title {
+		font-family: $roboto-cond;
+		font-size: rem(48);
+		color: #fff;
+		letter-spacing: 3px;
+	}
+
+	.hr-img {
+		width: 480px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.slogan {
+		font-family: $roboto-cond;
+		font-size: rem(32);
+		color: #fff;
+		letter-spacing: 10px;
+	}
+
+	.bottom-nav {
+		margin-top: 30px;
+		max-width: 465px;
+		margin-left: auto;
+		margin-right: auto;
+		@include display(flex);
+    	@include justify-content(space-between);
+    	@include align-items(center);
+
+		li {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		li.divider {
+			display: inline-block;
+			width: 1px;
+			height: 75px;
+			background-color: rgba(255, 255, 255, 0.2);
+			@include transform(rotate(20deg));
+		}
+
+		a {
+			color: #8A73FF;
+			line-height: 75px;
+			font-family: $roboto-cond;
+			font-size: rem(20);
+			letter-spacing: 2px;
+		}
+	}
+
+	.go-down {
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		@include transform(translateX(-50%));
+		a {
+			height: 60px;
+			width: 60px;
+			display: block;
+			position: relative;
+			background-color: rgba(255, 255, 255, 0.1);
+			border-radius: 50%;
+			@include transition(all 0.1s ease-in);
+
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.2);
+			}
+
+			img {
+				position: absolute;
+				top: 55%;
+				left: 50%;
+				width: 60%;
+				height: 40%;
+
+				@include transform(translate(-50%, -50%));
+			}
+		}
+	}
+}
