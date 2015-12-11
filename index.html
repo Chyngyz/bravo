@@ -45,7 +45,7 @@
                 <a href="#nightclub">ДИСКО-БАР</a>
               </li>
               <li class="bravo-menu">
-                <a href="#">МЕНЮ</a>
+                <a target="_blank" href="bravo-menu.pdf">МЕНЮ</a>
               </li>
             </ul>
           </nav>
@@ -55,15 +55,15 @@
         <!-- Begin header-r -->
         <div class="header-r">
           <div class="other">
-            <span>ул. Ахунбаева 150</span>
+            <span>ул. Ахунбаева 146а</span>
             <a href="https://goo.gl/maps/miUJa6p6rVQ2" target="_blank" class="marked">Открыть карту</a>
           </div>
           <div class="tel">
             0 554 600 601 <span>//</span> 0 708 508 000
           </div>
           <div class="other">
-            <a href="#" class="marked">Заказать корпоратив</a>
-            <a href="#" id="book-form-link" data-mfp-src="#test-popup" class="marked">Забронировать столик</a>
+            <a href="#" id="book-corp-link" data-mfp-src="#book-corp" class="marked">Заказать корпоратив</a>
+            <a href="#" id="book-form-link" data-mfp-src="#book-table" class="marked">Забронировать столик</a>
           </div>
         </div>
         <!-- End of header-r -->
@@ -82,7 +82,7 @@
               <a href="#nightclub">ДИСКО-БАР</a>
             </li>
             <li class="bravo-menu">
-              <a href="#">МЕНЮ</a>
+              <a target="_blank" href="bravo-menu.pdf">МЕНЮ</a>
             </li>
           </ul>
         </div>
@@ -170,8 +170,8 @@
             <div class="details-wrap">
               
               <div class="detail">
-                <div class="top2">вместимость<br>80 ЧЕЛОВЕК</div>
-                <div class="label"></div>
+                <div class="top2">80 ЧЕЛОВЕК</div>
+                <div class="label">вместимость</div>
               </div>
               <div class="detail">
                 <div class="top2">ЕВРОПЕЙСКАЯ <br>кухня</div>
@@ -201,8 +201,8 @@
                 <div class="label">FACE CONTROL & DRESS CODE</div>
               </div>
               <div class="detail">
-                <div class="top1">10<sup>00</sup> - 05<sup>00</sup></div>
-                <div class="label">время работы</div>
+                <div class="top1">21<sup>00</sup> - 05<sup>00</sup></div>
+                <div class="label">режим работы</div>
               </div>
 
             </div>
@@ -226,8 +226,8 @@
             <a href="http://instagram.com/bravo.bishkek" target="_blank"><img src="images/insta.svg" alt=""><span>Мы в Instagram</span></a>
           </div>
           <div class="btns">
-            <a href="#" id="book-form-link2" data-mfp-src="#test-popup" class="book">Забронировать столик</a>
-            <a href="#" class="banket">Заказать корпоратив</a>
+            <a href="#" id="book-form-link2" data-mfp-src="#book-table" class="book">Забронировать столик</a>
+            <a href="#" id="book-corp-link2" data-mfp-src="#book-corp" class="banket">Заказать корпоратив</a>
           </div>
         </div>
       </div>
@@ -235,7 +235,7 @@
     <!-- End of all content -->
 
     <!-- Begin popup -->
-    <div id="test-popup" class="book-popup mfp-hide">
+    <div id="book-table" class="book-popup mfp-hide">
       <div class="title">ЗАБРОНИРОВАТЬ СТОЛИК</div>
       <form id="form">
         <div class="input-group">
@@ -245,6 +245,23 @@
         <div class="input-group"> 
           <label for="inputTel">Тел:</label> 
           <input type="text" name="phone" id="inputTel" placeholder="+996(000) 00 00 00" required>
+        </div>
+        <input type="submit" name="submit" class="submit-btn">
+      </form>
+    </div>
+    <!-- End of popup -->
+
+    <!-- Begin popup -->
+    <div id="book-corp" class="book-popup mfp-hide">
+      <div class="title">Заказать корпоратив</div>
+      <form id="formCorp">
+        <div class="input-group">
+          <label for="inputName">Имя</label>
+          <input type="text" name="name" id="inputName" placeholder="Бакыт" required>
+        </div>
+        <div class="input-group"> 
+          <label for="inputTel">Тел:</label> 
+          <input type="text" name="phone" id="inputTel2" placeholder="+996(000) 00 00 00" required>
         </div>
         <input type="submit" name="submit" class="submit-btn">
       </form>
