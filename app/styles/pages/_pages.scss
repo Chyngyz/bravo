@@ -4,16 +4,16 @@
 }
 
 .home {
-	background-image: url('../images/bg/home.jpg');
+	background-image: url('../images/bg/bravo-1-glav.jpg');
 }
 .pub {
-	background-image: url('../images/bg/pub.jpg');
+	background-image: url('../images/bg/bravo-3-pub.jpg');
 }
 .restaurant {
-	background-image: url('../images/bg/restaurant.jpg');
+	background-image: url('../images/bg/bravo-4-rest.jpg');
 }
 .nightclub {
-	background-image: url('../images/bg/nightclub.jpg');
+	background-image: url('../images/bg/bravo-5-club.jpg');
 }
 .contact {
 	background-image: url('../images/bg/contact.jpg');
@@ -121,9 +121,9 @@
 
 
 .content-block {
-	max-width: 560px;
+	max-width: 710px;
 	position: relative;
-	padding: 25px 10px 25px 25px;
+	padding: 35px 10px 35px 25px;
 	background-color: rgba(0,0,0, 0.75);
 
 	&.grey {
@@ -374,6 +374,7 @@
   width: auto;
   max-width: 300px;
   margin: 20px auto;
+  border: 1px solid #ccc;
 
   .title {
   	color: #fff;
@@ -426,3 +427,71 @@
 	background-color: #FF3624;
 	border: none;
 }
+
+#fp-nav ul li a, .fp-slidesNav ul li a {
+	&:hover, &:active, &:focus {
+		border-bottom: none;
+	}
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+	background-color: #ABABAB;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,10 @@
 $(document).ready(function() {
 	$('#fullpage').fullpage({
 		anchors: ['home', 'pub', 'restaurant', 'nightclub', 'contact'],
+		navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: ['Главная', 'Пивной паб', 'Ресторан', 'Диско-клуб', 'Контакты'],
+        showActiveTooltip: true,
 		css3: true
 	});
 

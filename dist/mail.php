@@ -1,7 +1,7 @@
 <?php
 
-$EmailFrom = "arystanuulu@gmail.com";
-$EmailTo = "arystanuulu@yandex.ru";
+$EmailFrom = "bravo-bishkek@mail.ru";
+$EmailTo = "bravo-bishkek@mail.ru";
 $Subject = "Новая заявка с сайта";
 $Name = Trim(stripslashes($_POST['name'])); 
 $Tel = Trim(stripslashes($_POST['phone'])); 
