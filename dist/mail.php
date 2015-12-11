@@ -2,7 +2,7 @@
 
 $EmailFrom = "bravo-bishkek@mail.ru";
 $EmailTo = "bravo-bishkek@mail.ru";
-$Subject = "Новая заявка с сайта";
+$Subject = "Заявка с сайта на заказ столика";
 $Name = Trim(stripslashes($_POST['name'])); 
 $Tel = Trim(stripslashes($_POST['phone'])); 
 

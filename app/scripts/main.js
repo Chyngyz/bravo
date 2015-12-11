@@ -14,12 +14,30 @@ $(document).ready(function() {
 	  midClick: true
 	});
 
-	$("#inputTel").mask("+996 (###) ## ## ##");
+	$('#book-corp-link, #book-corp-link2').magnificPopup({
+	  type:'inline',
+	  midClick: true
+	});
+
+	$("#inputTel, #inputTel2").mask("+996 (###) ## ## ##");
 
 	$("#form").submit(function() {
 		$.ajax({
 			type: "POST",
 			url: "mail.php",
+			data: $(this).serialize()
+		}).done(function() {
+			$(this).find("input").val("");
+			alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+			$("#form").trigger("reset");
+		});
+		return false;
+	});
+
+	$("#formCorp").submit(function() {
+		$.ajax({
+			type: "POST",
+			url: "mailCorp.php",
 			data: $(this).serialize()
 		}).done(function() {
 			$(this).find("input").val("");
