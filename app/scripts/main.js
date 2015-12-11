@@ -5,6 +5,7 @@ $(document).ready(function() {
         navigationPosition: 'right',
         navigationTooltips: ['Главная', 'Пивной паб', 'Ресторан', 'Диско-клуб', 'Контакты'],
         showActiveTooltip: true,
+        responsiveWidth: 768,
 		css3: true
 	});
 
@@ -27,4 +28,9 @@ $(document).ready(function() {
 		});
 		return false;
 	});
+
+	$('#mobile-menu').click(function(){
+		$(this).toggleClass('open');
+
+	})
 });

@@ -28,6 +28,10 @@
 	width: 480px;
 	margin-top: 20px;
 	margin-bottom: 20px;
+
+	@include MQM(MD) {
+		display: none;
+	}
 }
 
 
@@ -35,10 +39,24 @@
 	text-align: center;
 	position: relative;
 
+	.container {
+		@include MQM(SM) {
+			margin-top: 30px;
+		}
+
+		@include MQM(XS) {
+			margin-top: 140px;
+		}
+	}
+
 	.brand {
 		width: 290px;
 		display: inline-block;
 		margin-bottom: 50px;
+
+		@include MQM(MD) {
+			width: 150px;
+		}
 	}
 
 	.title {
@@ -46,7 +64,10 @@
 		font-size: rem(48);
 		color: #fff;
 		letter-spacing: 3px;
-
+		
+		@include MQM(MD) {
+			font-size: rem(28);
+		}
 	}
 
 
@@ -55,6 +76,12 @@
 		font-size: rem(32);
 		color: #fff;
 		letter-spacing: 10px;
+
+		@include MQM(MD) {
+			font-size: rem(28);
+			letter-spacing: 5px;
+			display: none;
+		}
 	}
 
 	.bottom-nav {
@@ -66,9 +93,17 @@
     	@include justify-content(space-between);
     	@include align-items(center);
 
+    	@include MQM(MD) {
+			display: block;
+		}
+
 		li {
 			display: inline-block;
 			vertical-align: middle;
+
+			@include MQM(MD) {
+				display: block;
+			}
 		}
 
 		li.divider {
@@ -77,6 +112,10 @@
 			height: 75px;
 			background-color: rgba(255, 255, 255, 0.2);
 			@include transform(rotate(20deg));
+
+			@include MQM(MD) {
+				display: none;
+			}
 		}
 
 		a {
@@ -85,6 +124,10 @@
 			font-family: $roboto-cond;
 			font-size: rem(20);
 			letter-spacing: 2px;
+
+			@include MQM(MD) {
+				line-height: 45px;
+			}
 		}
 	}
 
@@ -93,6 +136,11 @@
 		bottom: 10px;
 		left: 50%;
 		@include transform(translateX(-50%));
+
+		@include MQM(MD) {
+			display: none;
+		}
+
 		a {
 			height: 60px;
 			width: 60px;
@@ -198,6 +246,10 @@
 		font-family: $proxima-bold;
 		color: #fff;
 		letter-spacing: 3px;
+
+		@include MQM(MD) {
+			font-size: rem(38);
+		}
 	}
 
 	p {
@@ -205,6 +257,10 @@
 		font-size: 1rem;
 		line-height: rem(19);
 		color: #fff;
+
+		@include MQM(MD) {
+			display: none;
+		}
 	}
 
 	&--btn {
@@ -232,6 +288,10 @@
 		color: #fff;
 		display: inline-block;
 		margin-right: 50px;
+
+		@include MQM(MD) {
+			margin-top: 15px;
+		}
 		
 		&:last-child {
 			margin-right: 0;
@@ -273,6 +333,11 @@
 		font-size: rem(48);
 		letter-spacing: 3px;
 		margin-bottom: 20px;
+
+		@include MQM(MD) {
+			font-size: rem(24);
+			margin-top: 30px;
+		}
 	}
 
 	p {
@@ -280,6 +345,10 @@
 		max-width: 470px;
 		margin: 0 auto 30px;
 		font-size: rem(18);
+
+		@include MQM(MD) {
+			display: none;
+		}
 	}
 
 	.tel {
@@ -288,8 +357,14 @@
 		letter-spacing: 1px;
 		margin-bottom: 25px;
 
+
+
 		span {
 			color: #666;
+
+			@include MQM(MD) {
+				display: none;
+			}
 		}
 	}
 
@@ -301,6 +376,7 @@
 			color: #fff;
 			padding-left: 10px;
 			margin-left: 10px;
+
 
 			&:hover, &:active, &:focus {
 				border-bottom: none;
@@ -323,6 +399,12 @@
 			
 			&:last-child {
 				margin-right: 0;
+			}
+
+			@include MQM(MD) {
+				display: block;
+				margin-right: 0;
+				margin-top: 10px;
 			}
 			
 			&:hover, &:active, &:focus {
@@ -351,13 +433,24 @@
 
 			&:hover, &:active, &:focus {
 				border-bottom: none;
+			}
 
+			@include MQM(MD) {
+				display: block;
+				margin-right: auto;
+				margin-left: auto;
+				margin-top: 10px;
+				text-align: center;
 			}
 		}
 
 		.book {
 			background-color: #FF3624;
 			margin-right: 50px;
+
+			@include MQM(MD) {
+				margin-right: auto;
+			}
 		}
 
 		.banket {
@@ -438,8 +531,17 @@
 	background-color: #ABABAB;
 }
 
+#fp-nav {
+	@include MQM(MD) {
+		display: none;
+	}
+}
 
-
+.visible-md {
+	@include MQ(MD) {
+		display: none;
+	}
+}
 
 
 

@@ -13,6 +13,10 @@
     @include display(flex);
     @include justify-content(space-between);
     @include align-items(center);
+
+    @include MQM(MD) {
+      display: block;
+    }
   }
 
   .logo {
@@ -92,11 +96,23 @@
 
   &-l {
     height: 80px;
+
+    @include MQM(MD) {
+      display: none;
+    }
   }
 
   &-r {
     text-align: right;
     margin-top: -3px;
+
+    @include MQM(MD) {
+      margin-right: 15px;
+    }
+
+    @media (min-width : 480px) and (max-width : 768px) {
+        float: right;
+    }
 
     .other {
       font-size: rem(13);
@@ -111,6 +127,10 @@
         padding-left: 10px;
         margin-left: 20px;
         color: #fff;
+
+        @include MQM(XS) {
+          margin-left: 0;
+        }
 
         &:active, &:focus, &:hover {
           border-bottom: none;
@@ -144,5 +164,108 @@
     background-color: #8A73FF;
     border-radius: 50%;
     @include transform(translateY(-50%));
+  }
+}
+
+.menu {
+  text-align: center;
+  margin-top: 10px;
+  
+  @include MQ(MD) {
+    display: none;
+  }
+
+  @media (min-width : 480px) and (max-width : 768px) {
+      float: left;
+      padding-left: 15px;
+      margin-top: 0;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  &.open {
+    text-align: left;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 0;
+    background-color: #8A73FF;
+
+    .trigger {
+      border-radius: 0;
+      padding-left: 80px;
+      width: 100%;
+      border-bottom: 1px solid #6E5CCC;
+    }
+
+    .mobile-nav {
+      display: block;
+
+
+      a {
+        color: #fff;
+        font-size: rem(15);
+        font-family: $roboto-cond;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: block;
+        height: 45px;
+        padding-left: 80px;
+        padding-top: 15px;
+        margin-top: 10px;
+
+        &:active, &:focus, &:hover {
+          border-bottom: none;
+          background-color: #6E5CCC;
+        }
+
+      }
+
+      .bravo-menu {
+        position: relative;
+        display: block;
+        a {
+          color: #FF3624;
+        }
+
+        &:after {
+          content: "PDF";
+          position: absolute;
+          top: 25%;
+          left: 125px;
+          color: #fff;
+          background-color: #A90000;
+          font-size: rem(9);
+          font-family: $roboto-cond;
+          border-radius: 3px;
+          font-weight: bold;
+          padding: 2px 3px;
+
+        }
+      }
+    }
+  }
+
+  .trigger {
+    background-color: #8A73FF;
+    font-size: rem(15);
+    font-family: $roboto;
+    color: #fff;
+    height: 45px;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 7px 10px;
+    text-transform: uppercase;
+
+  }
+
+  img {
+    height: 32px;
+    width: 32px;
+    margin-left: 10px;
   }
 }
