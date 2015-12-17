@@ -59,8 +59,8 @@
 
     a {
       color: #fff;
-      font-size: rem(15);
-      font-family: $roboto-cond;
+      font-size: rem(14);
+      font-family: $proxima-bold;
       text-decoration: none;
       text-transform: uppercase;
 
@@ -200,6 +200,8 @@
       padding-left: 80px;
       width: 100%;
       border-bottom: 1px solid #6E5CCC;
+      font-family: $proxima-bold;
+      letter-spacing: 3px;
     }
 
     .mobile-nav {
@@ -209,7 +211,7 @@
       a {
         color: #fff;
         font-size: rem(15);
-        font-family: $roboto-cond;
+        font-family: $proxima-bold;
         text-decoration: none;
         text-transform: uppercase;
         display: block;
@@ -217,6 +219,7 @@
         padding-left: 80px;
         padding-top: 15px;
         margin-top: 10px;
+        letter-spacing: 3px;
 
         &:active, &:focus, &:hover {
           border-bottom: none;
@@ -236,7 +239,7 @@
           content: "PDF";
           position: absolute;
           top: 25%;
-          left: 125px;
+          left: 140px;
           color: #fff;
           background-color: #A90000;
           font-size: rem(9);

@@ -24,15 +24,6 @@
 // Page in detail
 //
 // ===============================================	
-.hr-img {
-	width: 480px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-
-	@include MQM(MD) {
-		display: none;
-	}
-}
 
 
 .home {
@@ -61,9 +52,10 @@
 
 	.title {
 		font-family: $proxima-bold;
-		font-size: rem(48);
+		font-size: rem(30);
 		color: #fff;
-		letter-spacing: 3px;
+		letter-spacing: 5px;
+		text-transform: uppercase;
 		
 		@include MQM(MD) {
 			font-size: rem(28);
@@ -71,22 +63,9 @@
 	}
 
 
-	.slogan {
-		font-family: $roboto-cond;
-		font-size: rem(32);
-		color: #fff;
-		letter-spacing: 10px;
-
-		@include MQM(MD) {
-			font-size: rem(28);
-			letter-spacing: 5px;
-			display: none;
-		}
-	}
-
 	.bottom-nav {
 		margin-top: 30px;
-		max-width: 465px;
+		max-width: 615px;
 		margin-left: auto;
 		margin-right: auto;
 		@include display(flex);
@@ -101,33 +80,37 @@
 			display: inline-block;
 			vertical-align: middle;
 
+
 			@include MQM(MD) {
 				display: block;
 			}
 		}
 
-		li.divider {
-			display: inline-block;
-			width: 1px;
-			height: 75px;
-			background-color: rgba(255, 255, 255, 0.2);
-			@include transform(rotate(20deg));
-
-			@include MQM(MD) {
-				display: none;
-			}
+		img {
+			height: 34px;
+			width: 35px;
 		}
 
 		a {
-			color: #8A73FF;
+			color: #fff;
 			line-height: 75px;
-			font-family: $roboto-cond;
-			font-size: rem(20);
+			font-family: $proxima-bold;
+			font-size: rem(15);
 			letter-spacing: 2px;
-
+			text-transform: uppercase;
 			@include MQM(MD) {
 				line-height: 45px;
 			}
+
+			&:hover, &:active, &:focus {
+				border-bottom: none;
+
+				span {
+					border-bottom: 1px dashed;
+				}
+			}
+
+
 		}
 	}
 
@@ -142,11 +125,11 @@
 		}
 
 		a {
-			height: 60px;
-			width: 60px;
+			height: 47px;
+			width: 47px;
 			display: block;
 			position: relative;
-			background-color: rgba(255, 255, 255, 0.1);
+			border: 2px solid #fff;
 			border-radius: 50%;
 			@include transition(all 0.1s ease-in);
 
@@ -158,8 +141,8 @@
 				position: absolute;
 				top: 55%;
 				left: 50%;
-				width: 60%;
-				height: 40%;
+				width: 17px;
+				height: 20px;
 
 				@include transform(translate(-50%, -50%));
 			}
@@ -171,81 +154,25 @@
 .content-block {
 	max-width: 710px;
 	position: relative;
-	padding: 35px 10px 35px 25px;
-	background-color: rgba(0,0,0, 0.75);
-
-	&.grey {
-		border: 8px solid #C0AB92;
-
-		.content-block--badge {
-			background-color: #C0AB92;
-			color: #333333;
-		}
-		
-		.content-block--btn {
-			background-color: #C0AB92;
-			color: #333333;
-
-			&:hover, &:active, &:focus {
-				background-color:lighten(#C0AB92, 10);
-			}
-		}
-
-	}
-
-	&.red {
-		border: 8px solid #FF3333;
-
-		.content-block--badge {
-			background-color: #FF3333;
-			color: #fff;
-		}
-		
-		.content-block--btn {
-			background-color: #FF3333;
-			color: #fff;
-
-			&:hover, &:active, &:focus {
-				background-color:lighten(#FF3333, 10);
-			}
-		}
-
-	}
-
-	&.purple {
-		border: 8px solid #8A73FF;
-
-		.content-block--badge {
-			background-color: #8A73FF;
-			color: #fff;
-		}
-		
-		.content-block--btn {
-			background-color: #8A73FF;
-			color: #fff;
-
-			&:hover, &:active, &:focus {
-				background-color:lighten(#8A73FF, 10);
-			}
-		}
-
+	@include MQM(MD) {
+		margin-left: 20px;
 	}
 
 	&--badge {
-		position: absolute;
-		top: -4px;
 		font-size: rem(15);
 		line-height: 1;
-		padding: 7px;
-		font-family: $roboto-cond;
-		@include transform(translateY(-50%));
+		color: #fff;
+		font-family: $proxima-bold;
+		letter-spacing: 5px;
+		margin-bottom: 10px;
+		display: block;
 	}
 
 	&--title {
-		font-size: rem(52);
+		font-size: rem(30);
 		font-family: $proxima-bold;
 		color: #fff;
-		letter-spacing: 3px;
+		letter-spacing: 5px;
 
 		@include MQM(MD) {
 			font-size: rem(38);
@@ -254,8 +181,8 @@
 
 	p {
 		font-family: $roboto;
-		font-size: 1rem;
-		line-height: rem(19);
+		font-size: rem(14);
+		line-height: rem(17);
 		color: #fff;
 
 		@include MQM(MD) {
@@ -264,19 +191,20 @@
 	}
 
 	&--btn {
-		padding: 18px 24px;
+		padding: 16px 24px 14px;
 		text-transform: uppercase;
-		font-family: $roboto-cond;
-		font-weight: bold;
+		font-family: $proxima-bold;
 		font-size: rem(15);
 		line-height: 1;
+		color: #fff;
 		display: inline-block;
 		margin-top: 28px;
+		border: 2px solid #fff;
 		@include transition(all 0.1s ease-in);
 
 		&:hover, &:active, &:focus {
-			border-bottom: none;
-
+			border: 2px solid #fff;
+			color: #fff;
 		}
 	}
 }
@@ -329,12 +257,13 @@
 .contact {
 	text-align: center;
 	color: #fff;
+	position: relative;
 
 	.title {
 		font-family: $proxima-bold;
-		font-size: rem(48);
-		letter-spacing: 3px;
-		margin-bottom: 20px;
+		font-size: rem(30);
+		letter-spacing: 5px;
+		margin-bottom: 40px;
 
 		@include MQM(MD) {
 			font-size: rem(24);
@@ -355,9 +284,9 @@
 
 	.tel {
 		font-family: $proxima-bold;
-		font-size: rem(34);
+		font-size: rem(22);
 		letter-spacing: 1px;
-		margin-bottom: 25px;
+		margin-bottom: 10px;
 
 
 
@@ -387,6 +316,8 @@
 	}
 
 	.social {
+		margin-top: 25px;
+
 		img {
 			height: 42px;
 			width: 42px;
@@ -423,20 +354,17 @@
 		.book, .banket {
 			padding: 18px 24px;
 			text-transform: uppercase;
-			font-family: $roboto-cond;
+			font-family: $proxima-bold;
 			font-size: rem(15);
 			line-height: 1;
 			display: inline-block;
 			margin-top: 28px;
+			border: 2px solid;
 			color: #fff;
-			width: 230px;
-			letter-spacing: 0px;
+			letter-spacing: 5px;
 			@include transition(all 0.1s ease-in);
 
-			&:hover, &:active, &:focus {
-				border-bottom: none;
-			}
-
+			
 			@include MQM(MD) {
 				display: block;
 				margin-right: auto;
@@ -447,16 +375,58 @@
 		}
 
 		.book {
-			background-color: #FF3624;
+			border-color: #FF3624;
 			margin-right: 50px;
 
 			@include MQM(MD) {
 				margin-right: auto;
 			}
+
+			&:hover, &:active, &:focus {
+				border: 2px solid;
+			}
+
 		}
 
 		.banket {
-			background-color: #8A73FF;
+			border-color: #8A73FF;
+
+			&:hover, &:active, &:focus {
+				border: 2px solid;
+			}
+
+		}
+	}
+
+	.footer {
+		position: absolute;
+		bottom: 0px;
+		width: 100%;
+		left: 50%;
+		border-top: 1px solid #1A1A1A;
+		@include transform(translateX(-50%));
+		
+		.container {
+			@include display(flex);
+			@include justify-content(space-between);
+			padding: 20px 0;
+		}
+
+
+		@include MQM(MD) {
+			display: none;
+		}
+
+		a, span {
+			color: #4D4D4D;
+			font-family: $roboto;
+			font-size: rem(14);
+		}
+
+		a {
+			&:hover, &:active, &:focus {
+				border-bottom: none;
+			}
 		}
 	}
 }
@@ -465,21 +435,52 @@
 .book-popup {
   position: relative;
   background: rgba(0, 0, 0, 0.95);
-  padding: 20px;
+  
   width: auto;
-  max-width: 300px;
+  max-width: 800px;
   margin: 20px auto;
-  border: 1px solid #ccc;
+  border: 2px solid #fff;
+
+  @include MQM(MD) {
+  		
+		width: 300px;
+	}
 
   .title {
   	color: #fff;
-  	text-align: center;
+  	text-align: left;
   	font-family: $proxima-bold;
 	font-size: rem(20);
 	line-height: rem(26);
 	letter-spacing: 3px;
 	margin-bottom: 20px;
 	text-transform: uppercase;
+  }
+
+  .l {
+  	width: 40%;
+  	padding: 40px 30px;
+  	float: left;
+
+  	@include MQM(MD) {
+  		float: none;
+  		width: 100%;
+  	}
+  }
+
+  .r {
+  	width: 59%;
+  	height: 330px;
+  	float: right;
+
+  	@include MQM(MD) {
+  		display: none;
+  	}
+  }
+
+  .map {
+	height: 100%;
+	width: 100%;
   }
 }
 
@@ -512,7 +513,7 @@
 .submit-btn {
 	padding: 18px 24px;
 	text-transform: uppercase;
-	font-family: $roboto-cond;
+	font-family: $proxima-bold;
 	font-size: rem(15);
 	line-height: 1;
 	display: inline-block;
@@ -520,8 +521,9 @@
 	color: #fff;
 	width: 100%;
 	letter-spacing: 0px;
-	background-color: #FF3624;
-	border: none;
+	border-color: #FF3624 !important;
+	border: 2px solid;
+	background-color: transparent;
 }
 
 #fp-nav ul li a, .fp-slidesNav ul li a {
