@@ -3,7 +3,6 @@ $(document).ready(function() {
 		anchors: ['home', 'pub', 'restaurant', 'nightclub', 'contact'],
 		navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['Главная', 'Пивной паб', 'Ресторан', 'Диско-клуб', 'Контакты'],
         showActiveTooltip: true,
         responsiveWidth: 768,
 		css3: true
@@ -21,6 +20,10 @@ $(document).ready(function() {
         } else {
         	$('.logo').show();
         }
+	});
+
+	$('.close').on('click', function () {
+		$.magnificPopup.close();
 	});
 
 	$('#book-form-link, #book-form-link2').magnificPopup({

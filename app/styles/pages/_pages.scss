@@ -41,7 +41,7 @@
 	}
 
 	.brand {
-		width: 290px;
+		width: 205px;
 		display: inline-block;
 		margin-bottom: 50px;
 
@@ -154,6 +154,12 @@
 .content-block {
 	max-width: 710px;
 	position: relative;
+	padding: 50px 0px 50px 70px;
+    position: relative;
+    background: url('../images/content-bg.png');
+    background-size: 100% 100%;
+    background-position: center center;
+
 	@include MQM(MD) {
 		margin-left: 20px;
 	}
@@ -184,6 +190,7 @@
 		font-size: rem(14);
 		line-height: rem(17);
 		color: #fff;
+		max-width: 450px;
 
 		@include MQM(MD) {
 			display: none;
@@ -204,7 +211,8 @@
 
 		&:hover, &:active, &:focus {
 			border: 2px solid #fff;
-			color: #fff;
+			color: #000;
+			background:#fff;
 		}
 	}
 }
@@ -228,7 +236,7 @@
 
 		.top1 {
 			font-family: $proxima-bold;
-			font-size: rem(36);
+			font-size: rem(30);
 			line-height: 1;
 		}
 
@@ -481,6 +489,21 @@
   .map {
 	height: 100%;
 	width: 100%;
+  }
+
+  .close {
+  	position: absolute;
+  	top: -45px;
+    right: -5px;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+
+  	svg {
+  		fill: #ffffff;
+  		height: 100%;
+  		width: 100%;
+  	}
   }
 }
 
