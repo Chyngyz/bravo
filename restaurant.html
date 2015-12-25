@@ -30,20 +30,20 @@
 
         <!-- Begin header-l -->
         <div class="header-l">
-          <div class="logo active" data-men="home">
+          <div class="logo active">
             <a href="#home"><img src="images/bravo-logo.svg" alt=""></a>
           </div>
 
           <nav>
             <ul class="main-nav">
-              <li data-men="pub">
-                <a href="#pub">ПИВНОЙ ПАБ</a>
+              <li>
+                <a href="#">ПИВНОЙ ПАБ</a>
               </li>
-              <li data-men="restaurant">
-                <a href="#restaurant">РЕСТОРАН</a>
+              <li>
+                <a href="/#restaurant">РЕСТОРАН</a>
               </li>
-              <li data-men="nightclub">
-                <a href="#nightclub">ДИСКО-БАР</a>
+              <li>
+                <a href="#">ДИСКО-БАР</a>
               </li>
               <li class="bravo-menu">
                 <a target="_blank" href="bravo-menu.pdf">МЕНЮ</a>
@@ -73,14 +73,14 @@
         <div id="mobile-menu" class="menu">
           <div class="trigger">Главное меню <img src="images/menu.svg" alt=""></div>
           <ul class="mobile-nav">
-            <li data-men="pub">
-              <a href="#pub">ПИВНОЙ ПАБ</a>
+            <li >
+              <a href="#">ПИВНОЙ ПАБ</a>
             </li>
-            <li data-men="restaurant">
-              <a href="#restaurant">РЕСТОРАН</a>
+            <li>
+              <a href="/#restaurant">РЕСТОРАН</a>
             </li>
-            <li data-men="nightclub">
-              <a href="#nightclub">ДИСКО-БАР</a>
+            <li>
+              <a href="#">ДИСКО-БАР</a>
             </li>
             <li class="bravo-menu">
               <a target="_blank" href="bravo-menu.pdf">МЕНЮ</a>
@@ -93,48 +93,56 @@
     <!-- End of fixed header -->
     
     <!-- All Content -->
-    <div id="fullpage-home" data-main-block="home" class="bravo-content-block">
+    <div id="fullpage-restaurant" data-main-block="restaurant" class="bravo-content-block">
       <!-- Home Page -->
-      <div class="section home">
+      <div class="section restaurant-page">
         <div class="container">
-          <div class="brand">
-            <img src="images/bravo-logo.svg" alt="">
+          <div class="floor">
+            2 ЭТАЖ
           </div>
           <div class="title">
-            3 УРОВНЯ ОТДЫХА<br> НА ЛЮБОЙ ВКУС
+            РЕСТОРАН
           </div>
+          <div class="rest-desc">Ресторан с изысканной европейской кухней и просторным светлым залом располагается на втором этаже нашего комплекса.  Меню и винная карта прекрасно сбалансированы. Идеальное место утренней чашечки кофе, деловых встреч, бизнес ланча, радостных вечеринок или банкетов. </div>
           <nav>
             <ul class="bottom-nav">
-              <li data-men="pub">
-                <a href="#pub">
-                  <img src="images/beer.svg" alt="">
-                  <span>ПИВНОЙ ПАБ</span>
-                </a>
+              <li>
+                <div class="detail">
+                  <div class="top2">80 <span class="label">ЧЕЛ.</span></div>
+                  <div class="label">вместимость</div>
+                </div>
               </li>
-              <li data-men="restaurant">
-                <a href="#restaurant">
-                  <img src="images/restaurant.svg" alt="">
-                  <span>РЕСТОРАН</span>
-                </a>
+              <li class="divider"></li>
+              <li>
+                <div class="detail">
+                  <div class="top1">10<sup>00</sup> - 05<sup>00</sup></div>
+                  <div class="label">режим работы</div>
+                </div>
               </li>
-              <li data-men="nightclub">
-                <a href="#nightclub">
-                  <img src="images/disco.svg" alt="">
-                  <span>ДИСКО-клуб</span>
-                </a>
+              <li class="divider"></li>
+              <li>
+                <div class="detail">
+                  <div class="label">Бесплатное <br>Обслуживание</div>
+                </div>
+              </li>
+              <li class="divider"></li>
+              <li>          
+                <div class="detail">
+                  <div class="label">европейская <br>кухня</div>
+                </div>
               </li>
             </ul>
           </nav>
         </div>
-        <div data-men="pub" class="go-down">
-          <a href="#pub"><img src="images/arrow-down.svg" alt=""></a>
+        <div data-men="restaurant-events" class="go-down">
+          <a href="#restaurant-events"><img src="images/arrow-down.svg" alt=""></a>
         </div>
         
       </div>
       <!-- End of home -->
 
       <!-- Events Page -->
-      <div class="section events events-main">
+      <div class="section events events-rest">
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-center">
@@ -144,15 +152,12 @@
         </div>
         <div id="events-carousel" class="events--carousel">
           <div class="events--carousel-item">
-            <span class="events--carousel-loc">В КЛУБЕ</span>
             <a href="images/events/1-bg.jpg"><img src="images/events/1.jpg" alt=""></a>
           </div>
           <div class="events--carousel-item">
-            <span class="events--carousel-loc">В КЛУБЕ</span>
             <a href="images/events/2-bg.jpg"><img src="images/events/2.jpg" alt=""></a>
           </div>
           <div class="events--carousel-item">
-            <span class="events--carousel-loc">В КЛУБЕ</span>
             <a href="images/events/3-bg.jpg"><img src="images/events/3.jpg" alt=""></a>
           </div>
         </div>
@@ -160,112 +165,61 @@
       <!-- End of events -->
 
       <!-- Pub page -->
-      <div class="section pub">
+      <div class="section restaurant-page-1">
         <div class="container">
 
-          <div class="content-block">
-            <span class="content-block--badge">3 ЭТАЖ</span>
-            <div class="content-block--title">ПИВНОЙ ПАБ</div>
-            <p>Только свежее пиво, обалденная кухня, кальян, потрясающе уютная атмосфера, внимательные официанты, трансляция матчей. В общем все, что нужно для отличного вечера в компании друзей! </p>
-            <div class="details-wrap">
-              
-              <div class="detail">
-                <div class="top1"><span class="small">ОТ </span>70 c</div>
-                <div class="label">ЗА КРУЖКУ</div>
-              </div>
-              <div class="detail">
-                <div class="top1">0 c</div>
-                <div class="label">обслуживание</div>
-              </div>
-              <div class="detail">
-                <div class="top1">10<sup>00</sup> - 05<sup>00</sup></div>
-                <div class="label">режим работы</div>
-              </div>
-
-            </div>
-            <a href="#" class="content-block--btn hidden">ПОДРОБНЕЕ</a>
+          <div class="content-block content-block-inner">
+            
+            <div class="content-block--title">Интерьер</div>
+            <p>Благодаря огромным окнам интерьер легок и наполнен светом. Комфортные диваны и удобные столики, картины и книжные полки. Изысканная сервировка «Bravo» неожиданно удачно сочетает французский шарм 19 века и минималистичный hi-tech 21-го века. <br>Все подчинено общей атмосфере, а приятная цветовая палитра превратит любую трапезу в произведение искусства!</p>
           </div>
 
         </div>
       </div>
       <!-- End of pub -->
-
-      <div class="section restaurant">
+      
+      <div class="section restaurant-page-2">
         <div class="container">
           
-          <div class="content-block red">
-            <span class="content-block--badge">2 ЭТАЖ</span>
-            <div class="content-block--title">РЕСТОРАН</div>
-            <p>Изысканная сервировка ресторана «Bravo» сочетает французский шарм 19 века и минималистичный hi-tech 21 века. <br>Все подчинено общей атмосфере, а приятная цветовая палитра превратит любую трапезу в произведение искусства!<br>Идеальное место для утренней чашечки кофе, бизнес-ланча или классического банкета. </p>
-            <div class="details-wrap">
-              
-              <div class="detail">
-                <div class="top2">80 ЧЕЛОВЕК</div>
-                <div class="label">вместимость</div>
-              </div>
-              <div class="detail">
-                <div class="top2">ЕВРОПЕЙСКАЯ <br>кухня</div>
-              </div>
-              <div class="detail">
-                <div class="top2">ВИННАЯ <br>КАРТА</div>
-              </div>
+          <div class="content-block content-block-inner">
+            
+            <div class="content-block--title">Кухня</div>
+            <p>Одно из главных достоинств нашего ресторана - это конечно же кухня. Наш шеф-повар порадует вас изысканными блюдами европейской кухни: итальянская паста, вкусные десерты и роскошные блюда из мяса и рыбы. </p>
+          </div>
 
+        </div>
+      </div>
+
+      <div class="section restaurant-page-3">
+        <div class="container">
+          
+          <div class="content-block content-block-inner">
+            
+            <div class="content-block--title">Винная карта</div>
+            <p>Винная карта – настоящая гордость нашего ресторана. Культура потребления вина очень сложна и многогранна. Напиток должен гармонировать с основными блюдами, подчеркивать, а не перебивать его вкус. Винная карта ресторана «Bravo» содержит десятки наименований лучших вин, отлично дополняющих меню ресторана.</p>
+          </div>
+
+        </div>
+      </div>
+      
+      <!-- Gallery -->
+      <div class="section rest-gallery">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <p class="title">Галерея</p>
             </div>
-            <a href="/restaurant.html" class="content-block--btn">ПОДРОБНЕЕ</a>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="section nightclub">
-        <div class="container">
-          
-          <div class="content-block purple">
-            <span class="content-block--badge">1 ЭТАЖ</span>
-            <div class="content-block--title">ДИСКО-КЛУБ</div>
-            <p>Заведение класса Premium. Клуб может вместить в свои стены около 150 человек, в нем есть танцпол, бар и chillout-зона. Работает клуб 5 дней в неделю, со среды по воскресенье. Современное звуковое и световое оборудование, сочный дизайн в стиле техно, доброжелательность персонала и строгость секьюрити. </p>
-            <div class="details-wrap">
-              
-              <div class="detail">
-                <div class="top1">FC / DC</div>
-                <div class="label">FACE CONTROL & DRESS CODE</div>
-              </div>
-              <div class="detail">
-                <div class="top1">21<sup>00</sup> - 05<sup>00</sup></div>
-                <div class="label">режим работы</div>
-              </div>
-
-            </div>
-            <a href="#" class="content-block--btn hidden">ПОДРОБНЕЕ</a>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="section contact">
-        <div class="container">
-          <div class="title">
-            БУДЕМ РАДЫ ВИДЕТЬ ВАС!
-          </div>
-          
-          <div class="tel">0 554 600 601 <span>//</span> <br class="visible-md">0 708 508 000</div>
-          <div class="address">ул. Ахунбаева 146а <a href="https://goo.gl/maps/miUJa6p6rVQ2" class="marked">Открыть карту</a></div>
-          <div class="social">
-            <a href="https://www.facebook.com/Bravobishkek/?fref=ts" target="_blank"><img src="images/face.svg" alt=""><span>Мы на Facebook</span></a>
-            <a href="http://instagram.com/bravo.bishkek" target="_blank"><img src="images/insta.svg" alt=""><span>Мы в Instagram</span></a>
-          </div>
-          <div class="btns">
-            <a href="#" id="book-form-link2" data-mfp-src="#book-table" class="book">Забронировать столик</a>
-            <a href="#" id="book-corp-link2" data-mfp-src="#book-corp" class="banket">Заказать корпоратив</a>
           </div>
         </div>
-        <footer class="footer">
-          <div class="container">
-            <a href="#">&copy; 2015, BRAVO</a>
-            <span>Сделано в <a href="http://nambamedia.kg" target="_blank">NambaMedia</a></span>
-          </div>
-        </footer>
+        <!-- Gallery imgs -->
+        <div id="restaurant-gallery" class="events--carousel">
+          <a href="images/events/1-bg.jpg"><img src="images/events/1.jpg" alt=""></a>
+          <a href="images/events/2-bg.jpg"><img src="images/events/2.jpg" alt=""></a>
+          <a href="images/events/3-bg.jpg"><img src="images/events/3.jpg" alt=""></a>
+        </div>
+
       </div>
+      <!-- End of gallery -->
     </div>
     <!-- End of all content -->
 
