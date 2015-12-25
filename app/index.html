@@ -15,6 +15,8 @@
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/fullpage.js/jquery.fullPage.css" />
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="/bower_components/lightgallery/dist/css/lightgallery.css" />
     <link rel="stylesheet" href="/bower_components/magnific-popup/dist/magnific-popup.css" />
     <!-- endbower -->
     <!-- endbuild -->
@@ -102,7 +104,7 @@
     <!-- End of fixed header -->
     
     <!-- All Content -->
-    <div id="fullpage">
+    <div id="fullpage-home" data-main-block="home" class="bravo-content-block">
       <!-- Home Page -->
       <div class="section home">
         <div class="container">
@@ -141,6 +143,32 @@
         
       </div>
       <!-- End of home -->
+
+      <!-- Events Page -->
+      <div class="section events events-main">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <p class="title">СОБЫТИЯ И АКЦИИ</p>
+            </div>
+          </div>
+        </div>
+        <div id="events-carousel" class="events--carousel">
+          <div class="events--carousel-item">
+            <span class="events--carousel-loc">В КЛУБЕ</span>
+            <a href="images/events/1-bg.jpg"><img src="images/events/1.jpg" alt=""></a>
+          </div>
+          <div class="events--carousel-item">
+            <span class="events--carousel-loc">В КЛУБЕ</span>
+            <a href="images/events/2-bg.jpg"><img src="images/events/2.jpg" alt=""></a>
+          </div>
+          <div class="events--carousel-item">
+            <span class="events--carousel-loc">В КЛУБЕ</span>
+            <a href="images/events/3-bg.jpg"><img src="images/events/3.jpg" alt=""></a>
+          </div>
+        </div>
+      </div>
+      <!-- End of events -->
 
       <!-- Pub page -->
       <div class="section pub">
@@ -194,7 +222,7 @@
               </div>
 
             </div>
-            <a href="#" class="content-block--btn hidden">ПОДРОБНЕЕ</a>
+            <a href="/restaurant.html" class="content-block--btn">ПОДРОБНЕЕ</a>
           </div>
 
         </div>
@@ -318,6 +346,8 @@
     <script src="/bower_components/fullpage.js/jquery.fullPage.js"></script>
     <script src="/bower_components/fullpage.js/vendors/jquery.easings.min.js"></script>
     <script src="/bower_components/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.min.js"></script>
+    <script src="/bower_components/lightgallery/dist/js/lightgallery.min.js"></script>
     <script src="/bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
     <script src="/bower_components/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
     <!-- endbower -->

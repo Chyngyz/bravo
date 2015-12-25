@@ -110,7 +110,7 @@
       margin-right: 15px;
     }
 
-    @media (min-width : 480px) and (max-width : 768px) {
+    @media (min-width : 480px) and (max-width : 992px) {
         float: right;
     }
 
@@ -175,7 +175,7 @@
     display: none;
   }
 
-  @media (min-width : 480px) and (max-width : 768px) {
+  @media (min-width : 480px) and (max-width : 992px) {
       float: left;
       padding-left: 15px;
       margin-top: 0;

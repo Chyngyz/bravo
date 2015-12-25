@@ -5,6 +5,8 @@
     "jquery": "~2.1.1",
     "modernizr": "~2.8.1",
     "fullpage.js": "~2.7.6",
+    "slick-carousel": "~1.5.9",
+    "lightgallery": "~1.2.7",
     "magnific-popup": "~1.0.0",
     "jquery.maskedinput": "~1.4.1"
   },

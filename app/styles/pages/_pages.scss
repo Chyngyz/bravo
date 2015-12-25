@@ -6,12 +6,38 @@
 .home {
 	background-image: url('../images/bg/bravo-1-glav.jpg');
 }
+.events-main {
+	background-image: url('../images/bg/bravo-2-akcii.jpg');
+}
+
+.events-rest {
+	background-image: url('../images/bg/bravo-restarant1-2.jpg');
+}
+
 .pub {
 	background-image: url('../images/bg/bravo-3-pub.jpg');
 }
 .restaurant {
 	background-image: url('../images/bg/bravo-4-rest.jpg');
 }
+
+.restaurant-page {
+	background-image: url('../images/bg/bravo-restarant-1.jpg');
+}
+
+.restaurant-page-1 {
+	background-image: url('../images/bg/bravo-restarant1-3.jpg');
+}
+.restaurant-page-2 {
+	background-image: url('../images/bg/bravo-restarant1-4.jpg');
+}
+.restaurant-page-3 {
+	background-image: url('../images/bg/bravo-restarant1-5.jpg');
+}
+.rest-gallery {
+	background-color: #000;
+}
+
 .nightclub {
 	background-image: url('../images/bg/bravo-5-club.jpg');
 }
@@ -62,93 +88,166 @@
 		}
 	}
 
+}
 
-	.bottom-nav {
-		margin-top: 30px;
-		max-width: 615px;
-		margin-left: auto;
-		margin-right: auto;
-		@include display(flex);
-    	@include justify-content(space-between);
-    	@include align-items(center);
+.restaurant-page {
+	text-align: center;
+	position: relative;
 
-    	@include MQM(MD) {
-			display: block;
+	.container {
+		@include MQM(SM) {
+			margin-top: 30px;
 		}
 
-		li {
-			display: inline-block;
-			vertical-align: middle;
+		@include MQM(XS) {
+			margin-top: 140px;
+			padding-bottom: 30px;
+		}
+	}
+
+	.floor {
+		background-color: #FF3624;
+		color: #fff;
+		font-size: rem(15);
+		line-height: rem(15);
+		text-transform: uppercase;
+		font-family: $proxima-bold;
+		letter-spacing: 5px;
+		margin-bottom: 50px;
+		display: inline-block;
+		padding: 6px 7px 4px;
+
+		@include MQM(MD) {
+			width: 150px;
+		}
+	}
+
+	.title {
+		font-family: $proxima-bold;
+		font-size: rem(30);
+		color: #fff;
+		letter-spacing: 5px;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+		
+		@include MQM(MD) {
+			font-size: rem(28);
+		}
+	}
+
+	.rest-desc {
+		max-width: 530px;
+		margin-right: auto;
+		margin-left: auto;
+		color: #fff;
+		font-size: 1rem;
+		line-height: rem(19);
+		font-family: $roboto;
+		letter-spacing: 1px;
+	}
 
 
-			@include MQM(MD) {
-				display: block;
+}
+
+.bottom-nav {
+	margin-top: 30px;
+	max-width: 615px;
+	margin-left: auto;
+	margin-right: auto;
+	@include display(flex);
+	@include justify-content(space-between);
+	@include align-items(center);
+
+	@include MQM(MD) {
+		display: block;
+	}
+
+	li {
+		display: inline-block;
+		vertical-align: middle;
+
+
+		@include MQM(MD) {
+			display: block;
+		}
+	}
+
+	li.divider {		
+		display: inline-block;
+		width: 1px;	
+		height: 75px;		
+		background-color: rgba(255, 255, 255, 0.2);		
+		@include transform(rotate(20deg));		
+
+		@include MQM(MD) {		
+			display: none;		
+		}		
+		}
+
+	img {
+		height: 34px;
+		width: 35px;
+	}
+
+	a {
+		color: #fff;
+		line-height: 75px;
+		font-family: $proxima-bold;
+		font-size: rem(15);
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		@include MQM(MD) {
+			line-height: 45px;
+		}
+
+		&:hover, &:active, &:focus {
+			border-bottom: none;
+
+			span {
+				border-bottom: 1px dashed;
 			}
+		}
+
+
+	}
+}
+
+.go-down {
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	@include transform(translateX(-50%));
+
+	@include MQM(MD) {
+		display: none;
+	}
+
+	a {
+		height: 47px;
+		width: 47px;
+		display: block;
+		position: relative;
+		border: 2px solid #fff;
+		border-radius: 50%;
+		@include transition(all 0.1s ease-in);
+
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.2);
 		}
 
 		img {
-			height: 34px;
-			width: 35px;
-		}
+			position: absolute;
+			top: 55%;
+			left: 50%;
+			width: 17px;
+			height: 20px;
 
-		a {
-			color: #fff;
-			line-height: 75px;
-			font-family: $proxima-bold;
-			font-size: rem(15);
-			letter-spacing: 2px;
-			text-transform: uppercase;
-			@include MQM(MD) {
-				line-height: 45px;
-			}
-
-			&:hover, &:active, &:focus {
-				border-bottom: none;
-
-				span {
-					border-bottom: 1px dashed;
-				}
-			}
-
-
-		}
-	}
-
-	.go-down {
-		position: absolute;
-		bottom: 10px;
-		left: 50%;
-		@include transform(translateX(-50%));
-
-		@include MQM(MD) {
-			display: none;
-		}
-
-		a {
-			height: 47px;
-			width: 47px;
-			display: block;
-			position: relative;
-			border: 2px solid #fff;
-			border-radius: 50%;
-			@include transition(all 0.1s ease-in);
-
-			&:hover {
-				background-color: rgba(255, 255, 255, 0.2);
-			}
-
-			img {
-				position: absolute;
-				top: 55%;
-				left: 50%;
-				width: 17px;
-				height: 20px;
-
-				@include transform(translate(-50%, -50%));
-			}
+			@include transform(translate(-50%, -50%));
 		}
 	}
 }
+
+
 
 
 .content-block {
@@ -179,6 +278,7 @@
 		font-family: $proxima-bold;
 		color: #fff;
 		letter-spacing: 5px;
+		text-transform: uppercase;
 
 		@include MQM(MD) {
 			font-size: rem(38);
@@ -217,50 +317,78 @@
 	}
 }
 
-.details-wrap {
+.content-block-inner {
+	max-width: 550px;
+	position: relative;
+	padding: 50px;
+    position: relative;
+    background: url('../images/content-bg.png');
+    background-size: 100% 100%;
+    background-position: center center;
+    margin-left: 50px;
+    margin-top: 100px;
 
+    @include MQM(MD) {
+		margin: 0;
+	}
 
-	.detail {
+    p {
+		font-family: $roboto;
+		font-size: rem(16);
+		line-height: rem(19);
 		color: #fff;
-		display: inline-block;
-		margin-right: 50px;
-		vertical-align: top;
 
 		@include MQM(MD) {
-			margin-top: 15px;
-		}
-		
-		&:last-child {
-			margin-right: 0;
-		}
-
-		.top1 {
-			font-family: $proxima-bold;
-			font-size: rem(30);
-			line-height: 1;
-		}
-
-		.top2 {
-			font-family: $proxima-bold;
-			font-size: rem(28);
-			line-height: 1;
-			text-transform: uppercase;
-		}
-
-		.label, .small  {
-			font-family: $roboto-cond;
-			font-size: rem(15);
-			font-weight: bold;
-			line-height: 1;
-			text-transform: uppercase;
-		}
-
-		sup {
-			top: -1em;
-			font-size: 50%;
+			display: block;
 		}
 	}
 }
+
+
+
+
+.detail {
+	color: #fff;
+	display: inline-block;
+	margin-right: 50px;
+	vertical-align: top;
+	text-align: left;
+
+	@include MQM(MD) {
+		margin-top: 15px;
+	}
+	
+	&:last-child {
+		margin-right: 0;
+	}
+
+	.top1 {
+		font-family: $proxima-bold;
+		font-size: rem(30);
+		line-height: 1;
+	}
+
+	.top2 {
+		font-family: $proxima-bold;
+		font-size: rem(28);
+		line-height: 1;
+		text-transform: uppercase;
+	}
+
+	.label, .small  {
+		font-family: $roboto-cond;
+		font-size: rem(15);
+		font-weight: bold;
+		line-height: 1;
+		text-transform: uppercase;
+	}
+
+	sup {
+		top: -1em;
+		font-size: 50%;
+	}
+}
+
 
 .contact {
 	text-align: center;
@@ -439,6 +567,13 @@
 	}
 }
 
+// ===============================================
+//
+// Popups
+//
+// ===============================================	
+
+
 
 .book-popup {
   position: relative;
@@ -573,8 +708,87 @@
 
 
 
+// ===============================================
+//
+// Events page
+//
+// ===============================================	
 
 
+.events {
+
+	.slick-prev,
+	.slick-next {
+		width: 250px;
+		background:transparent;
+	}
+
+	.slick-prev:before, .slick-next:before {
+		background-image: none;
+	}
+
+	.slick-slide {
+		padding-left: 30px;
+		padding-right: 30px;
+
+		img {
+		    display: inline-block;
+		    width: 100%;
+		}
+	}
+
+	.title {
+		font-family: $proxima-bold;
+		font-size: rem(30);
+		color: #fff;
+		letter-spacing: 5px;
+		text-transform: uppercase;
+		
+		@include MQM(MD) {
+			font-size: rem(28);
+		}
+	}
+
+	.events--carousel-loc {
+		font-family: $proxima-bold;
+		font-size: rem(15);
+		color: #fff;
+		letter-spacing: 5px;
+		text-transform: uppercase;
+	}
+}
+
+.rest-gallery {
+
+	.title {
+		font-family: $proxima-bold;
+		font-size: rem(30);
+		color: #fff;
+		letter-spacing: 5px;
+		text-transform: uppercase;
+		
+		@include MQM(MD) {
+			font-size: rem(28);
+		}
+	}
+	.slick-slider {
+		margin-bottom: -80px;
+	}
+
+	.slick-prev,
+	.slick-next {
+		width: 220px;
+		height: 101%;
+	}
+
+	.slick-slide {
+
+		img {
+		    width: 100%;
+		    max-height: 500px
+		}
+	}
+}
 
 
 

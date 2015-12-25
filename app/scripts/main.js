@@ -1,12 +1,38 @@
 $(document).ready(function() {
-	$('#fullpage').fullpage({
-		anchors: ['home', 'pub', 'restaurant', 'nightclub', 'contact'],
-		navigation: true,
-        navigationPosition: 'right',
-        showActiveTooltip: true,
-        responsiveWidth: 768,
-		css3: true
-	});
+
+	var page = $('.bravo-content-block').data('main-block');
+
+	if(page == 'home') {
+		$('#fullpage-home').fullpage({
+			anchors: ['home','events', 'pub', 'restaurant', 'nightclub', 'contact'],
+			navigation: true,
+	        navigationPosition: 'right',
+	        showActiveTooltip: true,
+	        responsiveWidth: 768,
+			css3: true
+		});
+	} else if(page == 'restaurant') {
+		$('#fullpage-restaurant').fullpage({
+			anchors: [
+				'home',
+				'restaurant-events',
+				'restaurant-interior', 
+				'restaurant-kitchen', 
+				'restaurant-wine', 
+				'restaurant-gal'
+			],
+			navigation: true,
+	        navigationPosition: 'right',
+	        showActiveTooltip: true,
+	        responsiveWidth: 768,
+			css3: true
+		});
+	}
+
+	
+
+	
+
 
 	if (document.location.hash == "") {
 		$('.logo').hide();
@@ -243,6 +269,68 @@ $(document).ready(function() {
 	$('#mobile-menu').click(function(){
 		$(this).toggleClass('open');
 
-	})
+	});
+
+	$('#events-carousel').slick({
+	  	centerMode: true,
+	  	centerPadding: '250px',
+	  	slidesToShow: 1,
+	  	draggable: false,
+	  	responsive: [
+	    	{
+	      		breakpoint: 768,
+	      		settings: {
+	        		arrows: false,
+	        		centerMode: true,
+	        		centerPadding: '40px',
+	        		slidesToShow: 1
+	      		}
+			},
+	    	{
+	      		breakpoint: 480,
+	      		settings: {
+	        		arrows: false,
+	        		centerMode: true,
+	        		centerPadding: '40px',
+        			slidesToShow: 1
+	      		}
+	    	}
+	  	]
+	});
+
+	$('#restaurant-gallery').slick({
+	  	centerMode: true,
+	  	centerPadding: '220px',
+	  	slidesToShow: 1,
+	  	draggable: false,
+	  	responsive: [
+	    	{
+	      		breakpoint: 768,
+	      		settings: {
+	        		arrows: false,
+	        		centerMode: true,
+	        		centerPadding: '40px',
+	        		slidesToShow: 1
+	      		}
+			},
+	    	{
+	      		breakpoint: 480,
+	      		settings: {
+	        		arrows: false,
+	        		centerMode: true,
+	        		centerPadding: '40px',
+        			slidesToShow: 1
+	      		}
+	    	}
+	  	]
+	});
+	
+
+	$('.events .slick-slide, .rest-gallery .slick-track').lightGallery({
+	    thumbnail:false,
+	    download: false,
+	    animateThumb: false,
+	    showThumbByDefault: false
+	}); 
 
 });
