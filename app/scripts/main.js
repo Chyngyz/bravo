@@ -326,11 +326,45 @@ $(document).ready(function() {
 	});
 	
 
-	$('.events .slick-slide, .rest-gallery .slick-track').lightGallery({
+	$('.rest-gallery .slick-track').lightGallery({
 	    thumbnail:false,
 	    download: false,
 	    animateThumb: false,
 	    showThumbByDefault: false
 	}); 
 
+	$('.events .slick-slide').lightGallery({
+	    thumbnail:false,
+	    download: false,
+	    animateThumb: false,
+	    keyPress: false,
+	    controls: false,
+	    showThumbByDefault: false
+	});
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
